@@ -1,0 +1,41 @@
+﻿/* Общий стиль сайта */
+body {
+    background-color: #f5f5f5;
+}
+
+/* Navbar стиль */
+.navbar-brand {
+    font-weight: bold;
+    color: #ca1016 !important;
+    font-size: 24px;
+}
+
+/* Карточка машины */
+.car-card {
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+    .car-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+/* Цена */
+.car-price {
+    color: #ca1016;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Название машины */
+.car-title {
+    font-weight: 600;
+}
+
+/* Дополнительная информация */
+.car-info {
+    font-size: 14px;
+    color: gray;
+}

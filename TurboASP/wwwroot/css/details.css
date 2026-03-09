@@ -1,0 +1,15 @@
+﻿.car-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.car-price {
+    color: #ca1016;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.spec-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}

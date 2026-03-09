@@ -1,0 +1,50 @@
+﻿@using TurboASP.Models;
+@using TurboASP.Controllers;
+@using TurboASP.Repository;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Car>
+
+<div class="container mt-4">
+        
+    <div class="row">
+       
+
+
+        @foreach (Car c in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+                <div class="card car-card">
+
+                    <img src="~/lib/Images/images.jfif" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <div class="car-price">
+                            @c.Price
+                        </div>
+
+                        <div class="car-title">
+                            @c.Brand @c.Model
+                        </div>
+
+                        <div class="car-info">
+                            @c.Year | @c.Mileage km
+                        </div>
+                        <div class="car-info">
+                            @c.Date
+                        </div>
+                        <a href="#" class="stretched-link"></a>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+        </div class="row">
+    </div>

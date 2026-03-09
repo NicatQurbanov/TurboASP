@@ -1,0 +1,65 @@
+﻿@using TurboASP.Models
+
+@section ListingCSS{
+    <link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
+}
+
+@model Car
+
+
+<div class="container mt-4">
+
+    <div class="row">
+
+        <!-- IMAGE -->
+
+        <div class="col-lg-7">
+
+            <img src="~/lib/Images/images.jfif" class="img-fluid rounded">
+
+        </div>
+
+
+        <!-- INFO -->
+
+        <div class="col-lg-5">
+
+            <div class="car-title">
+                @Model.Brand @Model.Model
+            </div>
+
+            <div class="car-price mt-2">
+                @Model.Price AZN
+            </div>
+
+            <div class="mt-4">
+
+                <div class="spec-item">Год: @Model.Year</div>
+                <div class="spec-item">Пробег: @Model.Mileage km</div>
+                <div class="spec-item">Двигатель: @Model.EngineCapacity L</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DESCRIPTION -->
+
+    <div class="row mt-5">
+
+        <div class="col-lg-8">
+
+            <h4>Описание</h4>
+
+            <p>
+                Машина в отличном состоянии. Без аварий. Один владелец.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+

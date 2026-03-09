@@ -1,0 +1,76 @@
+﻿@using TurboASP.Models
+
+@{
+}
+
+@model Car
+
+<div class="container mt-5">
+
+    <h3>New listing:</h3>
+
+    <form method="post">
+
+        <div class="mb-3">
+
+            <label asp-for="Brand" class="form-label">Brand:</label>
+            <input asp-for="Brand" class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Model" class="form-label">Модель</label>
+            <input asp-for="Model" class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Year" class="form-label">Year</label>
+            <input asp-for="Year" class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Mileage" class="form-label">Mileage</label>
+            <input asp-for="Mileage" class="form-control">
+
+        </div>
+
+        <div class="mb-3">
+
+            <label asp-for="Price" class="form-label">Price</label>
+            <input asp-for="Price" class="form-control">
+
+        </div>
+        <div class="mb-3">
+
+            <label asp-for="EngineCapacity" class="form-label">Engine Capacity: </label>
+            <input asp-for="EngineCapacity" class="form-control">
+
+        </div>
+
+
+        @* <div class="mb-3">
+
+            <label class="form-label">Фото</label>
+            <input type="file" class="form-control">
+
+        </div> *@
+
+@*         <div class="mb-3">
+
+            <label class="form-label">Описание</label>
+<textarea class="form-control"></textarea>
+
+        </div> *@
+
+        <button type="submit" class="btn btn-danger">
+            Create listing
+        </button>
+
+    </form>
+
+</div>
