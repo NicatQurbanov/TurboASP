@@ -1,0 +1,191 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#projects-link">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="welcome-section">
+      <h1 class="introduction-content">Hello! My name is Nidjat!</h1>
+      <p class="introduction-content">Welcome to my page!</p>
+    </section>
+    
+ <div class="my-portfolio " id="projects-link">
+  <p>Here you go....</p>      
+<section id="projects"><div class="project-tile"></div>
+  <div class="projects-content"><a href="https://universalpoligraf.az/" target="_blank"><img src="https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,q_auto:good,w_700/India%20LOB/visiting-cards/vc/IN_Spot-UV-Visiting-Cards_Overview" alt="project#1" class="images"><p class="description">UV visiting cards</p></a></div>
+  <div class="projects-content"><a href="https://universalpoligraf.az/diger/blog/roll-up" target="_blank"><img src="https://tanmedia.az/wp-content/uploads/2023/09/roll-up-hazirlanmasi.jpg" alt="project#2" class="images"><p class="description">Roll-ups</p></a></div>
+  <div class="projects-content"><a href="https://universalpoligraf.az/diger/avadanliqlar" target="_blank"><img src="https://studio2am.co/cdn/shop/files/custom-shape-sticker-mockup-mockstar_b89fa461.jpg?v=1744034564&width=1000" alt="project#3" class="images"><p class="description">Stickers</p></a></div>
+  <div class="projects-content"><a href="https://universalpoligraf.az/elaqe" target="_blank"><img src="https://qinprinting.ca/wp-content/uploads/2023/12/hardcover-book-printing-1206.jpg" alt="project#4" class="images"><p class="description">Books</p></a></div>
+  </section>
+  </div>
+<section class="about-section">
+  <div id="about"><h1>I'm baby tumblr hexagon bespoke</h1><p>Cred single-origin coffee lumbersexual vice, pop-up blue bottle leggings pork belly food truck fit cloud bread tumeric woke readymade tonx. Taiyaki tbh everyday carry church-key four dollar toast cliche ramps actually fashion axe semiotics shaman snackwave copper mug blackbird spyplane. Four loko freegan XOXO, semiotics kogi praxis tonx shabby chic ethical jianbing retro bitters church-key offal. Lo-fi drinking vinegar taiyaki roof party narwhal, woke subway tile. Franzen bushwick blackbird spyplane kinfolk JOMO lomo yr.
+
+</p></div>
+  
+  </section>
+    <section class="contacts">
+      <div id="contacts">
+        <p>Email: blahblah@gmail.com</p>
+        <p>Telephone: 123-123-123</p>
+        <p><a id="profile-link" href="https://www.freecodecamp.org/fcc080c13fd-e9aa-4225-8ad6-b8a06ced565e" target="_blank">My Profile</a></p>
+        
+      </div>
+    </section>
+    <footer>
+      <p>Copyright 2025</p>
+      </footer>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+* {box-sizing: border-box;
+margin: 0;}
+
+:root {
+  --dark-pink:rgb(154, 139, 139); 
+}
+body {font-family: Helvetica;
+background-color: rgba(222, 199, 199, 0.5);}
+
+li {list-style-type: none;
+padding: 0 10px;
+font-weight: bold;}
+
+ul {display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+a{text-decoration: none;
+color: black;
+}
+
+#navbar {background: linear-gradient(180deg, rgb(103, 82, 82), rgb(220, 192, 192));
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+position: fixed;
+}
+
+.my-portfolio p {text-align: center;
+padding-top: 20px;
+font-size: 2.5rem;
+text-decoration: underline;
+font-weight: 1;
+opacity: 0.9;
+
+}
+
+#welcome-section {height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image: linear-gradient(rgba(212, 227, 141, 0.6), rgba(0, 0, 0, 0.6)), url(https://static.vecteezy.com/system/resources/thumbnails/015/449/032/small_2x/urban-landscape-illustration-street-view-with-cityscape-skyscrapers-and-modern-buildings-at-sunny-day-city-space-in-flat-style-background-concept-vector.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;}
+
+.introduction-content {font-size: 2rem;
+line-height: 3rem;}
+
+#projects {width:98%;
+display: grid;
+grid-template-columns: 450px 450px;
+gap: 100px 50px;
+grid-template-rows: 450px 450px;
+ justify-content: space-around; 
+align-content: center; 
+height: 100%;
+
+}
+
+.my-portfolio {background-color: rgb(222, 199, 199);
+margin: 0 auto;
+height: 1500px;
+width:98%;
+}
+
+.description {background-color: var(--dark-pink);
+display: block;
+padding: 20px;
+font-weighT: 100;
+
+
+}
+
+
+
+
+@media only screen and (max-width: 1026px) {
+  #projects {grid-template-columns: 450px;
+   align-content: space-around;
+   height: 100%;
+  grid-template-rows: 450px 450px 450px 450px;
+  gap: 0px;
+  }
+  .my-portfolio {height: 3200px;}
+}
+
+.images { width: 100%;
+height: 100%;
+object-fit: cover;
+display: flex;
+}
+
+#about {height: calc(80vh - 120px);
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10px 20px;}
+
+#about p {text-align: justify;
+position: relative;
+top: 5%;
+overflow: hidden;}
+
+#contacts {background-color: var(--dark-pink);
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+
+footer {background-color: black;
+opacity: 0.8;
+display: flex;
+justify-content: flex-end;
+}
+
+footer p {color: white;
+font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+** end of undefined **
+

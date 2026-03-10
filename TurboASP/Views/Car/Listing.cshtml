@@ -15,8 +15,15 @@
 
         <div class="col-lg-7">
 
-            <img src="~/lib/Images/images.jfif" class="img-fluid rounded">
-
+            @if (Model.ImageFile != null)
+            {
+                <img src="~/lib/Images/@Model.ImageFile.FileName" class="img-fluid rounded">
+            }
+            else
+            {
+                <img src="~/lib/Images/images.jfif" class="img-fluid rounded">
+            }
+            
             <div class="views">
                 @Model.Views users viewed
             </div>

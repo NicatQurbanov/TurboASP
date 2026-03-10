@@ -9,8 +9,8 @@
 
     <h3>New listing:</h3>
 
-    <form method="post">
-        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+    <form asp-action="Add" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
 
         <div class="mb-3">
 
@@ -67,7 +67,10 @@
             </select>
 
         </div>
-
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label">Upload image:</label>
+            <input asp-for="ImageFile"  type="file" class="form-control">
+        </div>
         <button type="submit" class="btn btn-danger">
             Create listing
         </button>

@@ -1,6 +1,7 @@
 ﻿
 
 using System.ComponentModel.DataAnnotations;
+using TurboASP.Extensions;
 
 namespace TurboASP.Models
 {
@@ -32,7 +33,14 @@ namespace TurboASP.Models
 
         public string Date { get; set; } = DateTime.Today.ToString("dd/MM/yyyy");
 
-        public Car()
+        [Display(Name = "Image")]
+        [Required(ErrorMessage = "Pick an Image")]
+        public IFormFile? ImageFile { get; set; }
+
+        [FileExtensions(Extensions = "jpg,jpeg,jfif,png", ErrorMessage = "The file must be a JPG, JPEG, JFIF or PNG image.")]
+        public string FileName => ImageFile?.FileName;
+
+        public Car()    
         {
             this.Id = id++;
         }

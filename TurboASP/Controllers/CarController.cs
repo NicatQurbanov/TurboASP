@@ -38,6 +38,13 @@ namespace TurboASP.Controllers
 
         public IActionResult Add(Car car)
         {
+            if(car.ImageFile != null)
+            {
+                var filePath = Path.Combine("wwwroot/lib/Images", car.ImageFile.FileName);
+
+                using var stream = new FileStream(filePath, FileMode.Create);
+                car.ImageFile.CopyToAsync(stream);
+            }
             if(!ModelState.IsValid)
                 return View(car);
             Cars.AddCar(car);
