@@ -1,11 +1,11 @@
 ﻿@using TurboASP.Models
 
-@section ListingCSS{
+@section ListingCSS
+{
     <link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
 }
 
 @model Car
-
 
 <div class="container mt-4">
 
@@ -17,8 +17,11 @@
 
             <img src="~/lib/Images/images.jfif" class="img-fluid rounded">
 
-        </div>
+            <div class="views">
+                @Model.Views users viewed
+            </div>
 
+        </div>
 
         <!-- INFO -->
 
@@ -37,29 +40,8 @@
                 <div class="spec-item">Год: @Model.Year</div>
                 <div class="spec-item">Пробег: @Model.Mileage km</div>
                 <div class="spec-item">Двигатель: @Model.EngineCapacity L</div>
-
             </div>
-
         </div>
-
     </div>
-
-
-    <!-- DESCRIPTION -->
-
-    <div class="row mt-5">
-
-        <div class="col-lg-8">
-
-            <h4>Описание</h4>
-
-            <p>
-                Машина в отличном состоянии. Без аварий. Один владелец.
-            </p>
-
-        </div>
-
-    </div>
-
 </div>
 

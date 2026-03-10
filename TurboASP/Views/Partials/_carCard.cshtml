@@ -5,37 +5,33 @@
 @{
 }
 
-@model List<Car>
+@model Car
 
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
-@foreach (Car c in Model)
-{
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="card car-card">
 
-        <div class="card car-card">
+        <img src="~/lib/Images/images.jfif" class="card-img-top">
 
-            <img src="~/lib/Images/images.jfif" class="card-img-top">
+        <div class="card-body">
 
-            <div class="card-body">
-
-                <div class="car-price">
-                    @c.Price
-                </div>
-
-                <div class="car-title">
-                    @c.Brand @c.Model
-                </div>
-
-                <div class="car-info">
-                    @c.Year | @c.Mileage km
-                </div>
-                <div class="car-info">
-                    @c.Date
-                </div>
-                <a href="#" class="stretched-link"></a>
-
+            <div class="car-price">
+                @Model.Price
             </div>
+
+            <div class="car-title">
+                @Model.Brand @Model.Model
+            </div>
+
+            <div class="car-info">
+                @Model.Year | @Model.Mileage km | @Model.EngineCapacity L
+            </div>
+            <div class="car-info">
+                @Model.Date
+            </div>
+            <a asp-action="Listing" asp-controller="Car" asp-route-id="@Model.Id" class="stretched-link"></a>
+
         </div>
     </div>
+</div>
 
-}

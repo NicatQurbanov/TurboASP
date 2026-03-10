@@ -10,26 +10,37 @@
     <h3>New listing:</h3>
 
     <form method="post">
+        @*<div asp-validation-summary="All" class="text-danger"></div>*@
 
         <div class="mb-3">
 
             <label asp-for="Brand" class="form-label">Brand:</label>
-            <input asp-for="Brand" class="form-control">
-
+            <select asp-for="Brand" class="form-control">
+                <option selected disabled>Choose brand</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Toyota">Toyota</option>
+                </select>
+            <span asp-validation-for="Brand"></span>
         </div>
 
         <div class="mb-3">
 
-            <label asp-for="Model" class="form-label">Модель</label>
-            <input asp-for="Model" class="form-control">
-
+            <label asp-for="Model" class="form-label">Model:</label>
+            <select asp-for="Model" class="form-control">
+                <option selected disabled>Choose model</option>
+                <option value="i1900">i1900</option>
+                <option value="i2100">i2100</option>
+                <option value="i3000">i3000</option>
+            </select>
+            <span asp-validation-for="Model"></span>
         </div>
 
         <div class="mb-3">
 
             <label asp-for="Year" class="form-label">Year</label>
             <input asp-for="Year" class="form-control">
-
+            <span asp-validation-for="Year"></span>
         </div>
 
         <div class="mb-3">
@@ -43,29 +54,19 @@
 
             <label asp-for="Price" class="form-label">Price</label>
             <input asp-for="Price" class="form-control">
-
+            <span asp-validation-for="Price"></span>
         </div>
         <div class="mb-3">
 
-            <label asp-for="EngineCapacity" class="form-label">Engine Capacity: </label>
-            <input asp-for="EngineCapacity" class="form-control">
+            <label asp-for="EngineCapacity" class="form-label">Engine Capacity:</label>
+            <select asp-for="EngineCapacity" class="form-control">
+                <option selected disabled>Choose capacity</option>
+                <option value="2.7">2.7</option>
+                <option value="3.5">3.5</option>
+                <option value="5">5</option>
+            </select>
 
         </div>
-
-
-        @* <div class="mb-3">
-
-            <label class="form-label">Фото</label>
-            <input type="file" class="form-control">
-
-        </div> *@
-
-@*         <div class="mb-3">
-
-            <label class="form-label">Описание</label>
-<textarea class="form-control"></textarea>
-
-        </div> *@
 
         <button type="submit" class="btn btn-danger">
             Create listing

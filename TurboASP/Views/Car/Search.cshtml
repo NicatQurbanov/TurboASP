@@ -1,10 +1,7 @@
-﻿@using TurboASP.Models;
-@using TurboASP.Controllers;
-@using TurboASP.Repository;
-@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using TurboASP.Models
 
+@{
+}
 
 @model List<Car>
 
@@ -12,5 +9,5 @@
     <div class="row">
         @foreach (Car c in Model)
             @await Html.PartialAsync("../Partials/_carCard", c);
-        </div class="row">
-    </div>
+    </div class="row">
+</div>

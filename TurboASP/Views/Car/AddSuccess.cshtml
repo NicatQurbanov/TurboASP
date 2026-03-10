@@ -1,0 +1,21 @@
+﻿@using TurboASP.Models
+
+@{
+}
+
+@model Car
+
+
+<p style="color: green; font-size: 2em;">
+    The car with specified charasteristics: <br /> 
+    - Brand: @Model.Brand <br />
+    - Model: @Model.Model <br />
+    - Year: @Model.Year <br />
+    - Price: @Model.Price <br />
+    - Mileage: @Model.Mileage <br />
+    - Engine Capacity: @Model.EngineCapacity
+    <br />
+    had been added successfully!
+    <a asp-action="Index" asp-controller="Car">Click here to return!</a>
+</p>
+
